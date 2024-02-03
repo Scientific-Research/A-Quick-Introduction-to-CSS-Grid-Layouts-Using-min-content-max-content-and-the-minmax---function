@@ -7,11 +7,22 @@
   display: grid;
   // grid-template-rows: repeat(2, 150px); // two items are explicit and other 6 items are implicitly added!
 
-  grid-template-columns: min-content 1fr 1fr min-content;
+  grid-template-columns: max-content 1fr 1fr min-content;
   // max-content takes the max width which this item needs and not more => this means max-content
   // of course, when we have two items and one is larger than others, max-content takes width of
   // the larger one for both items => it happens here for "Modern" and "and" items!
-  grid-template-rows: repeat(2, min-content);
+  // grid-template-rows: repeat(2, min-content);
+  // grid-template-rows: 150px min-content;
+  // grid-template-rows: min-content min-content; // min-content => it zipps the row as possible as
+  // it can! => just leave the space as it needs!
+  // when we set the row as 150px and out text is large, it will no longer fits and it will overflows!
+  // that's why the best option is that we use min-content instead of 150px. with min-content
+  // it will automatically set the required space for the content, not more and not less!
+
+  // grid-template-rows: repeat(2, minmax(min-content, min-content));
+  grid-template-rows: repeat(2, minmax(150px, min-content));
+  // min height: 150px and max-height: min-content => it fits automatically for the required
+  // space for our item, not more, not less!
 
   .item {
     padding: 20px;

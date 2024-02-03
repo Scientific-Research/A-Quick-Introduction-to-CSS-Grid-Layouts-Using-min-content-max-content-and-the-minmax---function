@@ -3,8 +3,8 @@
   margin: 30px auto;
   background-color: #ddd;
   display: grid;
-  grid-template-columns: min-content 1fr 1fr min-content;
-  grid-template-rows: repeat(2, min-content); }
+  grid-template-columns: max-content 1fr 1fr min-content;
+  grid-template-rows: repeat(2, minmax(150px, min-content)); }
   .container .item {
     padding: 20px;
     color: white;
