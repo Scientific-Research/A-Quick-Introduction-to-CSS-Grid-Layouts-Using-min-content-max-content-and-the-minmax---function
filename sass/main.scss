@@ -25,7 +25,12 @@
   // min height: 150px and max-height: min-content => it fits automatically for the required
   // space for our item, not more, not less!
 
-  grid-template-columns: minmax(200px, 300px) repeat(3, 1fr);
+  // grid-template-columns: minmax(200px, 300px) repeat(3, 1fr);
+  // grid-template-columns: minmax(200px, 50%) repeat(3, 1fr);
+  grid-template-columns: minmax(200px, 1fr) repeat(3, 1fr);
+  // note: the first item takes the maximum width and other three which have 1fr => takes the remaing
+  // divided by 3. when we decrease the width, the fits item takes minimum width and other 3 items
+  // take what stays as remaining!
 
   .item {
     padding: 10px;
