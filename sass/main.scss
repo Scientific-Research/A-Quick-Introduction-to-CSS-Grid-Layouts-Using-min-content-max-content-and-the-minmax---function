@@ -5,12 +5,13 @@
 
   // let's define our explicit grid:
   display: grid;
-  grid-template-rows: repeat(2, 150px); // two items are explicit and other 6 items are implicitly added!
+  // grid-template-rows: repeat(2, 150px); // two items are explicit and other 6 items are implicitly added!
 
-  grid-template-columns: max-content 1fr 1fr 1fr;
+  grid-template-columns: min-content 1fr 1fr min-content;
   // max-content takes the max width which this item needs and not more => this means max-content
   // of course, when we have two items and one is larger than others, max-content takes width of
   // the larger one for both items => it happens here for "Modern" and "and" items!
+  grid-template-rows: repeat(2, min-content);
 
   .item {
     padding: 20px;
