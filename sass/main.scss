@@ -43,8 +43,14 @@
   // we have still our 10 columns but they will be fit to our 8 needed columns automatically
   // and the last two columns will have width 0, that's why we don't see them!
 
+  //////////////////////RESPONSIVE DESIGN WITH GRID - ONLY WITH THIS 3 LINES//////
+  width: 90%;
   grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
   grid-auto-rows: 150px;
+  // with this, we have an absolutely fantastic responsive design:
+  // with this TRICK using auto-fit and minmax(Xpx,1fr), we can produces very responsive webpages!
+  // and then we don't need to write any media query, flexbox or something like that!
+  //////////////////////RESPONSIVE DESIGN WITH GRID - ONLY WITH THIS 3 LINES///////
 
   .item {
     padding: 10px;
