@@ -7,7 +7,7 @@
   display: grid;
   // grid-template-rows: repeat(2, 150px); // two items are explicit and other 6 items are implicitly added!
 
-  grid-template-columns: max-content 1fr 1fr min-content;
+  // grid-template-columns: max-content 1fr 1fr min-content;
   // max-content takes the max width which this item needs and not more => this means max-content
   // of course, when we have two items and one is larger than others, max-content takes width of
   // the larger one for both items => it happens here for "Modern" and "and" items!
@@ -20,9 +20,12 @@
   // it will automatically set the required space for the content, not more and not less!
 
   // grid-template-rows: repeat(2, minmax(min-content, min-content));
+  // width: 90%;
   grid-template-rows: repeat(2, minmax(150px, min-content));
   // min height: 150px and max-height: min-content => it fits automatically for the required
   // space for our item, not more, not less!
+
+  grid-template-columns: minmax(200px, 300px) repeat(3, 1fr);
 
   .item {
     padding: 10px;
