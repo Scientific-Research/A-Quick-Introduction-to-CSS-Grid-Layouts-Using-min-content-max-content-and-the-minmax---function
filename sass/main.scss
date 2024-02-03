@@ -3,6 +3,10 @@
   margin: 30px auto;
   background-color: #ddd;
 
+  // let's define our explicit grid:
+  display: grid;
+  grid-template-rows: repeat(2, 150px); // two items are explicit and other 6 items are implicitly added!
+
   .item {
     padding: 20px;
     color: white;
